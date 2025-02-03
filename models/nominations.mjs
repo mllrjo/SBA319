@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 
-const nominationsSchema = new mongoose.Schema({
+const nominationSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -11,4 +11,5 @@ const nominationsSchema = new mongoose.Schema({
   }
 });
 
-export default mongoose.model("nominations", nominationsSchema);
+const Nomination = mongoose.models.Nomination || mongoose.model("Nomination", nominationSchema);
+export default Nomination;

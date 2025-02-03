@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 
-const nomination_commentsSchema = new mongoose.Schema({
+const nomination_commentSchema = new mongoose.Schema({
   nominee: {
     type: String,
     required: true,
@@ -17,8 +17,9 @@ const nomination_commentsSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  faced_allegtions_of_misconduct: {
+  allegations_of_misconduct: {
     type: Boolean,
+    required: true,
   },
   notes: {
     type: String,
@@ -27,4 +28,4 @@ const nomination_commentsSchema = new mongoose.Schema({
 
 });
 
-export default mongoose.model("nominations_comments", nomination_commentsSchema);
+export default mongoose.model("nomination_comments", nomination_commentSchema);
